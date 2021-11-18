@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--  이 줄 없으면 아래 $는 특수기호로 인식함  -->
+</head>
+<body>
+<!--  $로 시작하면 jQuery 
+$(document).ready(); => 레디안에 잇는 문서가 준비되엇니
+--> 
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				var today = new Date();
+				$("p").eq(0).text(today); // p 태그에 
+				
+				 var year = today.getFullYear();
+				 $("p").eq(1).text(year);
+				 
+				 var month = today.getMonth()+1;
+				 $("p").eq(2).text(month);
+				 
+				 var date = today.getDate();
+				 $("p").eq(3).text(date);
+				 
+				 var day = today.getDay();
+				 $("p").eq(4).text(day);
+				
+				var hours = today.getHours();
+				$("p").eq(5).text(hours);
+				
+				var minutes= today.getMinutes();
+				$("p").eq(6).text(minutes);
+				
+				var seconds = today.getSeconds();
+				$("p").eq(7).text(seconds);
+
+			}
+	
+	);
+
+
+</script>
+<p></p> <!-- p태그 인덱스0번 -->
+<p></p> <!-- 인덱스1번 -->
+<p></p> <!-- 인덱스2번 -->
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+</body>
+</html>
