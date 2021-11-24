@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+document.write("<h3>컴퓨터 가위 바위 보 맞추기</h3>");
+var t = prompt("가위, 바위, 보 중 선택하세요","가위");
+
+var tnum;
+switch(t){
+case"가위": tnum=1; break;
+case"바위": tnum=2; break;
+case"보": tnum=3; break;
+default: alert("잘못작성하였습니다."); // 경고창
+location.reload(); //다시 시작 할 수 있게 프로그램을 불러들인다 , 현재 위치에서 새로고침
+}
+
+//1. 1부터 3까지의 난수(정수)를 발생 (가위 1 바위2 보3 )
+var com = Math.ceil(Math.random()*3); // Math.ceil() : 가장 가까운 정수로 반올림하고 결과를 반환
+
+
+//2. 난수를 이용해 컴퓨터 가위바위보 이미지 출력
+	document.write("<img src = 'img/math_img_"+com+".jpg', alt='가위바위보'>");
+
+//3. 사용자가 낸 값과 컴퓨터의 값이 일치하는지 조건 검사 (랜덤으로 틀리면 틀리고 맞으면 맞고)
+
+if(tnum==com) {
+	//window객체안에 있는 setTimeout (window.setTimeout)
+	setTimeout(function(){ alert("맞췄습니다. 축하합니다!!"); }, 100); //setTimeout : 정해진 시간이 지난 후에 실행됨 java의 Thread.sleep()과 동일
+}else {
+	setTimeout(function(){ alert("틀렸습니다. 다음 기회 또 도전하세요."); }, 100); // 3000=>3초
+	
+}		
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

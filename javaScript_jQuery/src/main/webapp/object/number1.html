@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Number 객체 : 표현방법<br>
+<script>
+var y = new Number(123); // 객체를 사용해서 
+var y2 = 123; // 객체를 쓰지 않고 
+
+var num1 = 3.456789;
+var num2 = 700000;
+var num3 = "30.5px";// px을 인식
+var num4 = 40;
+
+document.write("표현 가능한 가장 큰 수 :" + Number.MAX_VALUE,"<br>"); // 1.7976931348623157e+308
+document.write("숫자가 아닌 경우 표기:" + Number.NaN,"<br>"); // NaN	
+document.write("무한대 표기:" + Number.POSITIVE_INFINITY,"<br>");// Infinity
+document.write(num2.toExponential(2),"<br>"); // 반올림
+document.write(num1.toFixed(2),"<br>");// 지정된 소수 자릿수로 작성된 숫자와 함께 문자열을 반환
+document.write(num1.toString(),"<br>");
+document.write(num4.valueOf(),"<br>");
+document.write(parseInt(num3),"<br>"); // 30 // 문자를 제외하고 숫자만 출력 //parseInt = > 정수출력
+document.write(parseFloat(num3),"<br>"); // 30.5 // parseFloat => 실수 출력 
+
+
+let x = 123;
+document.write(x.toString());
+(123).toString();
+(100+23).toString(); // 123
+
+
+</script>
+</body>
+</html>

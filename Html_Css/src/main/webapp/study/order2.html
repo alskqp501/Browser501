@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MEMBER INFO</title>
+</head>
+
+<style>
+
+header{
+float:center;
+border: 1px solid black;
+}
+
+/* 목록에서 블릿 없애기(ul) */
+ul{
+list-style-type: none;
+}
+
+/* 라벨의 클라스tit */
+label.tit{
+font-weight: bold;
+width:80px;
+float:left;
+}
+
+
+fieldset {
+margin:15px 10px;
+}
+
+/* 필드셋의 제목 */
+fieldset legend {
+font-weight: bold;
+font-size: 18px;
+color:purple;
+}
+
+ul li{
+margin-bottom: 10px
+}
+
+</style>
+
+<body>
+<form action="#" method="get">
+
+<p> *표시는 필수 입력 표시 입니다. </p>
+
+ <fieldset>
+ <legend> 개인정보</legend>
+ <ul>
+ <li>
+  <label for="id" class="tit">*ID</label>
+  <input type="text" id="id" required="required"> 
+  </li>
+  
+  <li>
+   <label for="name" class="tit">*이름</label>
+  <input type="text" id="name" required="required"> 
+  </li>
+  
+ <li>
+  <label for="pw" class="tit" method="get">*비밀번호</label>
+  <input type="text" id="pw" required="required" minlength="14" >
+  </li>
+  
+   <li>
+  <label for="pw" class="tit">*비밀번호 확인</label>
+  <input type="text" id="pwck" value="" required="required" minlength="15">
+  </li>
+  
+  <li> 
+  <label for="birth" class="tit" method="get">*생년월일</label>
+            
+                <select name="user_birth_year">
+                 	<option value="1996" selected>1996</option>
+                        <option value="1997" selected>1997</option>
+                         <option value="1998" selected>1998</option>
+                        <option value="1999" selected>1999</option>
+                        <option value="2000" selected>2000</option>
+                        <option value="2001" selected>2001</option>
+                        <option value="2002" selected>2002</option>
+                        <option value="2003" selected>2003</option>
+                        <option value="2004" selected>2004</option>
+                    </select>
+                    년
+                    <select name="user_birth_month">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    월
+                    <select name="user_birth_day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+  </select>
+     일
+  
+  </li>
+
+ 
+ </ul>
+ </fieldset>
+
+
+
+</form>
+</body>
+</html>

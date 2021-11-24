@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+현재날짜부터 연말까지 몇일이 남았는지 
+<script>
+var t = new Date();
+var nowYear = t.getFullYear();
+var theDate = new Date(nowYear,11,31);//올해의 마지막날
+
+var diffDate = theDate-t;
+document.write(diffDate,"<br>");//milliseconds
+var result = Math.ceil(diffDate/(60*60*24*1000)); // 하루를 1000등분
+document.write('현재 일로부터 올해 말까지는 ' + result + "일 남았습니다.")
+
+
+
+
+</script>
+</body>
+</html>

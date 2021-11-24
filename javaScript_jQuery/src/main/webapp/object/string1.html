@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+문자 객체 생성<br>
+<script>
+var t = new String("Hello JavaScript");
+</script>
+
+<script>
+var str = "Hello Thank you good luck to you";
+document.write(str.charAt(16)+"<br>"); // g, 16본째글자 추출
+document.write(str.indexOf("you")+"<br>"); //you의 인덱스 값을 찾아줌 // 12번쨰 인덱스값이래 
+document.write(str.indexOf("you",16)+"<br>"); //29  //16번째 이후의 you 인덱스 값
+document.write(str.lastIndexOf("you",25)+"<br>");// 12 // 뒤에서 부터 앞으로 25번부터 시작해서 you의 인덱스 값
+document.write(str.match("luck")+"<br>");// match("찾을문자열이 있니") 잇으면 출력 없으면 null 출력 
+document.write(str.search("luck")+"<br>");//search("찾을 문자열 검색") 찾을 문자열을 찾아서 인덱스 값을 출력 
+document.write(str.substring(6,12)+"<br>");//Thank // 인덱스 6번 부터 시작, 12번 이전까지(11번까지)의 문자열 출력
+document.write(str.substr(21,4)+"<br>");//uck // 인덱스 21번부터 시작해서 길이가 4인 문자열 출력 (21~24번까지) 나느 왜 3개만 나오지 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+javaScript의 객체 개념 <br>
+
+객체의 종류: (1) Built-in 객체 : String, Date, Array,Math,,,, (만들어진 객체)<br>
+		 (2)Browser Object Model(BOM) 객체 <br>
+		 (3) Document Object Model <hr>
+
+
+
+<script>
+var tv = new Object(); // 객체를 변수tv에 담음  
+tv.color = "white";
+tv.price = 30000; // tv객체안의 변수에 3000을 넣겟다 
+tv.info = function() { // 익명 (이름이 없는 함수)
+	document.write("tv 색상 : " + this.color, "<br>");
+	document.write("tv 가격 : " + this.price, "<br>");
+}
+
+var car = {
+		color:"black",
+		price : 50000,
+		info: function() {
+			document.write("car 색상 : " + this.color, "<br>");
+			document.write("car 가격 : " + this.price, "<br>");
+		}
+		
+};
+document.write("==객체 메소드 호출1==","<br>");
+tv.info(); // 메소드 호출 
+
+document.write("==객체 메소드 호출2==","<br>");
+car.info(); // 메소드 호출 
+
+</script>
+</body>
+</html>

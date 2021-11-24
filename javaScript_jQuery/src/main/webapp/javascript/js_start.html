@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- <%  자바 쓸때는 jsp 파일로 해야함 %> -->
+<!-- <% System.out.println("a"); 
+실행여부 
+System.out.println("b");
+ %> -->
+
+javaScript : 대소문자 구분함 <br>
+			화면의 움직임을 표현하기 위해서 사용(동적 화면 설계), 엄격한 문법 규칙 (정적인화면설계=html)<br>
+			브라우저에서 수행되는 프로그램 
+Node.js :: 서버에서 실행되면 javaScript
+
+
+
+
+<script type="text/javascript">
+document.write("web output");
+console.log("console:: javascript");
+document.write("<br><br>");
+
+// 당신의 나이는? 20이상이면 성인입니다. 아니면 미성년자 입니다.
+		var age = prompt("당신의 나이는?","0"); // prompt('문자열을 입력하세요', '기본 값 문자열');
+		if(age >= 20)
+		document.write("당신은 성인입니다.")
+		else
+			document.write("당신은 미성년자 입니다.");//웹 페이지에 가장 먼저 데이터를 출력, document.write() 메소드는 대부분 테스트나 디버깅을 위해 사용
+			console.log("에러 확인...");
+
+</script>
+</body>
+</html>

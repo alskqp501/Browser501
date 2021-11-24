@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var num=0; // 전역변수
+
+function testFnc(){
+	var a = 500; // 지역변수
+	num++;
+	document.write(num,"<br>");
+	if(num == 10)  return; // 10이면 리턴
+	testFnc(); // 자기 자신을 리턴 
+}
+
+
+document.write(num,"<br>");
+//document.write(a,"<br>"); // a는 함수 안에 선언된 변수라 밖에서 사용 못함 , 여기에러 나서 다음 줄 실행 못함 
+testFnc();// 자기 자신을 리턴 
+document.write(num,"<br>");
+
+
+
+</script>
+</body>
+</html>

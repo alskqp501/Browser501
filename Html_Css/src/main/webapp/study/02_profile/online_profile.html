@@ -1,10 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">  <!--  명시를 제대로 해주어야 스크린 리더기가 언어를 인식  
+검색 옵션에서 '한국어로 된 문서로' 범위를 제한할 경우 lang='ko' 인 문서를 우선으로 검색 -->
 <head>
+
+<title>온라인 프로필 </title>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
+<!--  표의 이중 실선을 없애는 부분 -->
+<!-- table : 테이블을 만드는 태그 / tr :  행추가 / td : 열 추가 / th : 테이블의 헤더 -->
+<style> 
+
+/* table, td, th { */
+/*   border: 1px solid black; */
+/* } */
+
+/* table { */
+/*   border-collapse: collapse; */
+/* } */
+ 
+</style>
+<!--  css 파일 링크로 불러와서 서식 지정 -->
+<link rel="stylesheet" href="online_profile_table.css">
 </head>
+
 <body>
+<!-- alt = "bear" : 이미지를 찾지 못하면 bear라고 표시됨  -->
+<figure>
+	<img src ="../../img/pf.jpg" alt = "bear"><br> <!--  이미지 넣기 -->
+	<figcaption>오늘은 남은 인생이 시작되는 첫째날</figcaption>
+</figure>
+
+
+<h1>KilDong Hong</h1>
+<p>이메일 : alskqp501@gmail.com</p>
+<a href="alskqp501@gmail.com"> Send email</a> <!--  이메일 주소 링크 -->
+
+<h2>Who am I?</h2>
+<p>Front-end Web Tech.에 관심을 가지고 있습니다.<br>
+현재 마이크로소프트 공인 최고기술전문가(Most Valuable Professional)로 활동 중이며,<br>
+제주의 한 시골 마을에서 코딩 중입니다.</p>
+
+<h2 style = "front-size:400%;"> SNS</h2>
+
+<!-- Unordered HTML List (정렬되지 않은 목록) : <li>  </li> -->
+<a href="https://www.facebook.com/"> <li>facebook</li></a>
+<a href="https://twitter.com/"><li>twitter</li></a>
+<p>dkdk</p>
+<li> <a  href="https://www.facebook.com" target="_self">_self facebook</a></li> <!--  현재 윈도우창 그대로 링크페이지 열기  -->
+<li> <a  href="https://www.facebook.com" target="_blank">_blank  twitter</a></li><!-- 새로운 페이지로 열림  -->
+<li> <a  href="https://www.facebook.com" target="_top">"_top twitter</a></li> <!-- 최상위 프레임 열기	 -->
+
+
+
+<!-- 이미지에 링크 넣기 
+a : 하이퍼링크 생성 -->
+<a href="https://twitter.com/">
+<img src ="../../img/twitter.jpg" alt = "bear" style ="width:42px;height:42px;"></a>
+<a href="https://www.facebook.com/">
+<img src ="../../img/facebook.jpg" alt = "bear" style ="width:42px;height:42px;"></a><br><br>
+
+<br>
+
+<hr> <!--  수평줄 삽입 --><br><br>
+
+<!-- 정렬된 목록 (중첩 목록 사용하기) -->
+<h2 style = "front-size:400%;"> Skills</h2>
+<ul>
+<li>사용언어</li>
+	<ul>
+	<li><mark>Html</mark></li> <!--  하이라이트 <mark> -->
+	<li><mark>CSS</mark></li>
+	<li>Javascript</li>
+	<li>AngularJS</li>
+	</ul>
+</ul>
+
+<ul>
+<li>사용 툴</li>
+	<ul>	
+	<li>Photoshop(0years)</li>
+	<li>Dreamweaver(0years)</li>
+	<li>Visual Studio(0years)</li>
+	</ul>
+</ul> <br><br>
+
+
+<h2 style = "front-size:400%;"> Academic</h2>
+<!--  테이블 만들기 : 기본값은 이중선, 실선하려면  맨 위에 <style>에서 설정 해주기 -->
+<!-- tr :  행추가  td : 열 추가 th : 테이블의 헤더 -->
+<table>
+<caption>학력사항</caption> <!--  테이블의 제목을 표시할 경우 캡션 사용  -->
+	<tr> 
+		<th>출신학교</th>
+		<th>전공</th>
+		<th>기간</th>
+		<th>졸업구분</th>
+	</tr>
+	<tr>
+		<td>oo고등학교</td>
+		<td>(해당사항 없음)</td>
+		<td>2001.3 ~ 2004.2</td>
+		<td>졸업</td>
+	</tr>
+		<tr>
+		<td>ㅁㅁ대학교</td>
+		<td>컴퓨터공학</td>
+		<td>2004.3 ~ 2008.2</td>
+		<td>졸업</td>
+	</tr>
+</table>
 
 </body>
 </html>

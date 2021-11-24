@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+header {
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+/*콘텐츠영역 묶음 */
+section::after { 
+   content: ""; 
+  display: table; 
+ clear: both; 
+} 
+
+
+/*문서나 사이트를 연결하는 내비게이션 태그 */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px;
+  background: #f2f2f2;
+  padding: 20px;
+  text-align: left;
+}
+
+/* 실제 콘텐츠를 영역을 나타는내는 태그 */
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #ffffff;
+  height: 300px; 
+}
+
+footer {
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.aa{
+list-style-type: none;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>입양하기</h1>
+</header>
+
+<section>
+	<nav> 
+		<ul class="aa">
+		<li><a href = "#" >애완견 종류</a></li>
+		<li><a href = "#" > 입양하기</a> </li>
+		<li><a href = "#" >건강 돌보기</a></li>
+		<li><a href = "#" >더불어살기</a></li></ul>
+	</nav>
+
+	<article>
+	<h2>강아지 용품 준비하기</h2>
+		<ul><li> 강아지 집 </li>
+		<li> 강아지 먹이 </li>
+		<li> 밥그릇, 물병 </li>
+		<li> 이름표, 목줄 </li>
+		<li> 장난감, 개껌 </li>
+		<li> 애완용 간식 </li>
+		<li> 브러쉬, 빗, 털 제거 롤 </li>
+		<li> 귀 세정액, 구강스프레이, 기타 영양제 </li>
+		<li> 샴푸, 린스, 애견용 타올 </li></ul>
+	</article>
+</section>
+
+<footer>
+<p>Copyright 2018 nuridog</p>
+</footer>
+
+
+</body>
+</html>

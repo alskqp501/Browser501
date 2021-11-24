@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+1. 구구단 작성하기 (2단부터 9단까지) <hr>
+<script>
+for(var i = 2; i<=9;i++) { 
+ 	document.write (i + "단"+"<br>"); 
+	for(var j = 1 ; j<=9; j++){ 
+		document.write(i+"*" + j +" =" + (i*j)+"<br>");	 
+	} 
+ } 
+</script> 
+
+
+구구단 테이블 만들기
+<table>
+<script>
+document.write("<tr>"); 
+ for(var i = 2; i<=9;i++) { 
+ 	document.write ("<td>"+i + "단" + "</td>"); 
+ 	}  
+document.write("<tr>"); 
+
+
+	for(var j = 1 ; j<=9; j++){ 
+ 		document.write("<tr>"); 
+		
+	for(var i = 2; i<=9;i++){ 
+		document.write("<td>"+i+ "x" + j + " =" + i*j+ "</td>");	 
+	} 
+	document.write("</tr>"); 
+ } 
+</script> 
+</table>
+
+2. 5단만 출력<br>
+<script>
+for(var i = 1 ; i<=9;i++){
+	document.write("5"+"x"+i + "=" + (5*i)+"<br>");
+}
+
+</script>
+
+
+5단 만 출력 (함수)
+<script>
+function gugudan(n) {
+	document.write (n + "단"+"<br>");
+  for(var i = 1; i<=9;i++) {
+	  document.write(n+ "x" + i + " =" + (n*i)+"<br>");			
+	}
+  
+ }
+
+var n = prompt("몇 단 ?", "" );
+gugudan(n);
+
+</script>
+
+</body>
+</html>
