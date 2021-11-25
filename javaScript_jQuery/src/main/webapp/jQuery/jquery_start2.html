@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+<script>
+
+// $(function (){ 
+// 	$("#tit").css("border", "1px solid blue"); 
+// 	$("#tit").css("background-color", "yellow"); 
+// });
+
+
+//1. 
+$(function() {
+	$("#tit").css("border", "1px solid blue").css("background-color", "yellow");
+})
+
+
+//2.
+$(function() {
+	$("h1").css("border", "1px solid blue").css("background-color", "yellow");
+	$("#tit2").css("border", "1px solid blue").css("background-color", "yellow");
+})
+
+
+//3. 2번을 하나로 합치면 => 그룹선택자 
+$(function() {
+	$("h1, #tit2").css("border", "1px solid blue").css("background-color", "yellow"); 
+})
+
+
+</script>
+
+<h1>jQuery</h1>
+<h2 id = "tit">선택자(selector)</h2>
+<h3 id = "tit2">직접 선택자 selector </h3>
+
+</body>
+</html>

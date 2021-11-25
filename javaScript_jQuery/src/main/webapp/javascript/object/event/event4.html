@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+//이름과 연락처의 유효성 검사 (이름의 3~5자까지 입력을 받겠다 ) (전화번호는 전화번호 규칙에 값이 들어오는지 )
+//이름 : 시작부터 끝까지 한글 2~5 글자 사이
+//연락처 : 010-,019,011 - 3~4자리 - 4자리 
+function submit_chk(myForm) {
+	//검증하기 위한 도구를 변수에 저장 
+	var reg1 = /^[가-힣]{2-5}$/; // 정규식 // 가부터 힣까지 2~5글자가 반복
+	var reg2 = /^(010|011|02)\d{3,4}\d{4} $/; // 정규식  // | (수직바) : 선택 =>3개 중 하나 써라 //  \d{} : 숫자를 입력 , \s{} : 문자를입력 
+	
+	var name = myForm.user_name; // 브라우저에 입력한 값을 name 변수에 저장 
+	var tel = myForm.user_tel;
+	
+	var result1 = reg1.test(name.value); //test() => 정규식 표현 방법 //  문자열에서 패턴을 검색하고 결과에 따라 true 또는 false를 반환합니다.
+	// reg1의 값을 테스트 . name.value = 브라우저에 입력한 값 // reg1에 지정한 조건과 맞게 작성했는지 테스트 
+	var result2 = reg2.test(tel.value); // ture 값을 가짐 
+	
+	if(!result1){ 
+		alert("이름 입력이 잘못되었습니다.");
+		name.value = ""; // 작성된걸 지우고
+		name.focus(); // 다시 네임에 포커스 맞춤 
+		return false; //result1 이 false인 경우에 if문 실행 
+		
+	}else if(!result2){
+		alert("연락처 입력이 잘못되었습니다.");
+		tel.value = ""; // 작성된걸 지우고
+		tel.focus(); // 다시 네임에 포커스 맞춤 
+		return false; // 
+	}
+	
+}
+
+// 취소버튼을 눌렀을때
+function reset_chk(myForm) {
+	var result = confirm("정말로 회원가입을 취소 하시겠습니까?");
+	if(result) return false; // 부정의 값을 돌려주겟다
+	
+}
+
+
+</script>
+
+</head>
+<!-- html전체의 form의 이름이 f1, 그 안에 user_name 이름을 가진것에 포커스 메소드를 실행하겠다 -->
+<body onload = "document.f1.user_name.focus();"> 
+
+
+<form action ="#" method="post" name= "f1" onsubmit="return submit_chk(this);" onreset="return reset_chk(this);">     <!-- form태그의 이름이 f1 -->
+
+<fieldset>
+  <legend>회원가입</legend>
+	<p>
+		<label for="user_name" id = "user_name">이름</label>
+		<input type = "text" name="user_name" id="user_name">	
+	</p>
+	<p>
+		<label for="user_tel">연락처</label>
+		<input type = "text" name="user_tel" id="user_tel">	
+	</p>
+	<p>
+		<input type = "submit" value="회원가입">	
+		<input type = "reset" value="가입취소">	
+	</p>
+</fieldset>
+
+
+</form> 
+</body>
+</html>

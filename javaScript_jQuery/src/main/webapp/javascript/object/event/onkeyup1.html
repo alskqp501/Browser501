@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- onkeyup : 키보드를 눌렀다가 놨을떄  -->
+<!-- 즉, 키를 입력하면 문자 입력 후 이벤트가 발생된다. -->
+
+<p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
+Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase(); // 이 함수를 적용하겠다 
+}
+</script>
+
+</body>
+</html>

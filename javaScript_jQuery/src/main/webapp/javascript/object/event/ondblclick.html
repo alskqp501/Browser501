@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<p>This example uses the addEventListener() method to attach a "dblclick" event to a p element.</p>
+
+<p id="demo">Double-click me.</p>
+
+<script>
+//addEventListener : 여러개의 이벤트 핸들러를 등록 가능
+document.getElementById("demo").addEventListener("dblclick", myFunction); // id를 찾아서 더블클릭을 하면 함수 실행
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I was double-clicked!"; // 
+}
+</script>
+
+</body>
+</html>
+
+

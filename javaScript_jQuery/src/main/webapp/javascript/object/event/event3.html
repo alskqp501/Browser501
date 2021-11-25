@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function chColor(obj, state) {
+	var myColor;
+	if(state == "over"){ // 메소드의 상태값이 over면 =>함수씋때 over 넣어줌 
+		myColor ="red";
+	}else {myColor = "black";}
+	
+	obj.style.color=myColor; // this값..?
+}
+
+//버튼 안에 메소드에 세미콜론은 써도 되고 안써도 되공
+//this는 이벤트를 의미한다 
+</script>
+<button onmouseover="chColor(this, 'out');" onmouseout="chColor(this, 'over');">마우스 오버/ 아웃</button> 
+<!--  마우스를 올렸다 빼면 글자가 빨간색으로 바낌  -->
+
+</body>
+</html>
+

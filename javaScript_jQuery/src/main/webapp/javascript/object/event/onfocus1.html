@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- 입력 필드에 포커스가 있을 때 발생되는 이벤트 -->
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+
+<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+<script>
+//배경을 노란색으로 바꾸는 함수 
+function myFunction(x) {
+  x.style.background = "yellow";
+}
+</script>
+
+</body>
+</html>
