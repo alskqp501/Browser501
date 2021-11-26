@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="title"> 마우스 아웃</h1>
+
+ <a href="#" id="btn"><img src="img/btn_out.gif" alt="버튼"/></a>
+
+<p id = "img_src"></p>
+
+<script>
+//firstChild : 첫번째 인덳 
+var theBtn = document.getElementById("btn");
+var s = document.getElementById("img_src");
+
+//버튼 위에 mouseover 되었을 때
+ theBtn.onmouseover = function(){
+document.getElementById("title").innerHTML = "마우스 오버"; // 마우스가 올라가면 <h1>의 내용을 바꿔줌 
+theBtn.firstChild.src = "img/btn_over.gif"; // 이미지 교체 // 	//firstChild : 첫번째 인덳 
+s.innerHTML = theBtn.firstChild.src ; //src의 값을 s.innerHTML 여기에 저장 
+ }
+ 
+ 
+//버튼위에 mouseout 되었을때(default상태), 추가적으로 버튼주소 추가하여 출력하기
+
+	theBtn.onmouseout= function(){
+		document.getElementById("title").innerHTML = "마우스 아웃"; // 마우스가 올라가면 <h1>의 내용을 바꿔줌 
+		theBtn.firstChild.src = "img/btn_out.gif"; // 이미지 교체 	//firstChild : 첫번째 인덳 
+		s.innerHTML = theBtn.firstChild.src ; //src의 값을 s.innerHTML 여기에 저장 
+}
+	  
+	  
+	  
+	  
+	  
+</script>
+
+</body>
+</html>

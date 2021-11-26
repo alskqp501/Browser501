@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value; // 자바스크립트의 forms myFom안에 fname의 value 값에 x값을 넣겟다 
+  if (x == "") {
+    alert("Name must be filled out"); // x 값이 비어있으면 경고창을 뜨ㅣ우고 
+    return false; // 실행 안함 
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm" action="form.jsp" onsubmit="return validateForm()" method="post"> 
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

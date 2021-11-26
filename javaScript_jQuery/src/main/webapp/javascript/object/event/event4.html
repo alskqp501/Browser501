@@ -12,14 +12,14 @@
 function submit_chk(myForm) {
 	//검증하기 위한 도구를 변수에 저장 
 	var reg1 = /^[가-힣]{2-5}$/; // 정규식 // 가부터 힣까지 2~5글자가 반복
-	var reg2 = /^(010|011|02)\d{3,4}\d{4} $/; // 정규식  // | (수직바) : 선택 =>3개 중 하나 써라 //  \d{} : 숫자를 입력 , \s{} : 문자를입력 
+	var reg2 = /^(010|011|02)\d{3,4}\d{4}$/; // 정규식  // | (수직바) : 선택 =>3개 중 하나 써라 //  \d{} : 숫자를 입력 , \s{} : 문자를입력 
 	
 	var name = myForm.user_name; // 브라우저에 입력한 값을 name 변수에 저장 
 	var tel = myForm.user_tel;
 	
 	var result1 = reg1.test(name.value); //test() => 정규식 표현 방법 //  문자열에서 패턴을 검색하고 결과에 따라 true 또는 false를 반환합니다.
 	// reg1의 값을 테스트 . name.value = 브라우저에 입력한 값 // reg1에 지정한 조건과 맞게 작성했는지 테스트 
-	var result2 = reg2.test(tel.value); // ture 값을 가짐 
+	var result2 = reg2.test(tel.value);// ture 값을 가짐 
 	
 	if(!result1){ 
 		alert("이름 입력이 잘못되었습니다.");
