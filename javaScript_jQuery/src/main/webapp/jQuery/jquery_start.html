@@ -25,11 +25,16 @@ $(function(){
 	$("h1").css("border", "1px solid blue"); // h1태그에 대해서 css() 함수를 ㅡㅆ겟다 css() 함수 안에 조건 지정 
 	// $("*").css("border", "1px solid blue"); // 전체태그에 대해서 css() 함수를 ㅡㅆ겟다 css() 함수 안에 조건 지정 
 });
+
+$(function() {
+	$(".direct").css("background-color","yellow")
+	$(".direct",h2).css("background-color","yellow") // 그룹선택자 
+})
 </script>
 
 <h1>jQuery</h1>
 <h2>선택자(selector)</h2>
-<h3>직접 선택자 </h3>
+<h3 class="direct">직접 선택자 </h3>
 
 </body>
 </html>
