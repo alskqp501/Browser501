@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+</head>
+
+<script>
+///focus를 강제적으로 발생
+
+$(function () {
+	//1. user_name에 focus 강제 발생
+	$("#user_name").focus();
+	
+	//2. user_id에 focus 이동되었을 떄, 들어있는 값을 깨끗이 하기
+	$("#user_id").focus(function() {
+		$(this).val(""); // this = 이벤트가 일어나는 곳 // 빈문자열 = 초기화 
+	});
+	
+	//3. user_id에 focus가 사라졌을 떄, 텍스트 박스에 "아이디 입력"< 나오게 
+	$("#user_id").blur(function() {
+		$(this).val("아이디 입력"); 
+	});
+	
+	
+})
+
+
+</script>
+
+<body>
+
+<!-- input  = > 텍스트 박스 생성 -->
+<p><input type = "text" name="user_name" id="user_name"></p>
+<p><input type = "text" name="user_id" id="user_id"></p>
+
+
+
+</body>
+</html>

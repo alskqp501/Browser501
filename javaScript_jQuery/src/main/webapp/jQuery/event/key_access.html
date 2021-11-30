@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>키보드의 접근성</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<script>
+$(function() {
+	$("#btn1").mouseover(function() {
+		alert("Good");
+	})
+	
+	//마우스, 키보드 접근성 // 마우스 이벤트에 대응하는 키보드 이벤트 
+	//마우스 이벤트를 등록할때 마우스에 대응하는 키보드 이벤트도 함꼐 등록, 그래야 마우스가 없는 방문객이 사이트를 방문했을떄 키보드로 접근 가능 
+	$("#btn2").on("mouseover focus", function() {
+		alert("Hello");
+	});
+});
+
+//mouseover : 마유스 커서가 선택한 요소에 올라갔을 때 이벤트 발생 		focus : 선택한 요소애 포커스가 이동했을 떄 이벤트 발생 
+//키보드 접근성을 고려하여 마우스 이벤트를 등록할 때는 포커스를 이동할 수 있는 요소들인 <a> <button>태그 또는 입력 요소인 <input><selet><textarea> 태그에 이벤트를 등록 
+</script>
+<body>
+
+<p><a href="#" id="btn1">버튼1</a></p>
+<p><a href="#" id="btn2">버튼2</a></p>
+
+</body>
+</html>

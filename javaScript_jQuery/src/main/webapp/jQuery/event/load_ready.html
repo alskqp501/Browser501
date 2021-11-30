@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+
+ load: src에 연동돈 이미지, 프레임이 로딩 완료 된 후 함수 실행 <br>
+ ready : html문서 객체가 로딩 완료된 후에 function 실행 <br>
+ <hr>
+ 
+ <div id="wrap"></div>
+<!--  인라인 프레임(inline frame)을 정의할 때 사용 / 현재 문서 안에 다른 HTML 페이지를 삽입-->
+<iframe src="http://www.nate.com" width="300", height="200"></iframe>
+
+<script>
+
+// iframe에 있는 이미지나 페이지가 모두 날라와야 함수를 실행하겠다 
+$("iframe").load(function() {
+	$("#wrap").append("<p>로딩완료</p>");
+});
+
+//문서가 준비되었느냐 (html문서가 모두 와야해) 이미지같은거 없어도 문서만 준비됐으면 다 뜸 
+$(document).ready(function() {
+	$("#wrap").append("<p>레디완료</p>");
+});
+
+//출력결과 : 레디완료> 로딩완료> src 
+
+</script>
+
+
+
+</body>
+</html>

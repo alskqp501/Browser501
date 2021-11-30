@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 조작 및 생성</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/jquery-migrate-1.4.1.min.js"></script>
+
+</head>
+<script>
+$(function() {
+	//(1) h1 태그의 align 속성값을 left적용하기
+	$("h1").attr("align","left");// attr : 속성을 조회하거나 변경할수 있는 메소드 
+	//(2): li태그중 첫번째 요소에 텍스트를 새 텍스틀 바꾸기
+	//$("li:eq(0)").text("첫 번째 리스트");// text: 내용을 변경 
+	$("li:first").text("첫 번째 리스트");
+	//(3)h2태그에 자식 요소인 strong태그의 글자를 빨간색으로 적용
+	$("h2:nth-child(2)").css("color","red");// nth-child(n): 유형에 관계없이 부모 의 n 번째 자식인 모든 요소를 ​​선택
+	//$("h2 > strong").css("color","red"); // 부모 > 자식 
+	//(4)id=two인 요소의 이전 요소에 글자를 파란색으로 적용
+	$("#two").prev().css("color","blue");// .prev() : 이전 요소를 선택
+	//(5)id=two인 요소의 다음에요소에 글자를 보라색으로 적용
+	$("#two").next().css("color","purple");// next(): 다음요소를 선택 
+	//(6)id=two인 요소의 부모 요소에 파선을 생성 
+	$("#two").parent().css("border","2px dashed blue");
+	//(7)class=myList인 요소내의 가장 앞의 위치에 새요소를 추가 
+	$(".myList").prepend("<li>Front</li>"); //prepend() : 선택된 요소의 첫번쨰에 새로운 요소나 컨텐츠 추가 
+	//(8)class=myList인 요소내의 마지막 위치에 새요소를 추가 
+	$(".myList").append("<li>back</li>"); //append() : 선택된 요소의 마지막에 새로운 요소나 컨텐츠 추가 
+	//(9)class=three인 요소의 이전 위치에 새요소를 생성 
+	//$(".three").before("<li>앞에삽입</li>"); //.before(): 선택한 요소 앞에 새 요소를 추가하거나, 다른 곳에 있는 요소를 이동 
+	$("<li>앞에 삽입</li>").insertBefore(".three"); //.insertBefore(): 내용을 선택한 요소 앞에 추가 
+	//(10)class=three인 요소의 다음 위치에 새 요소를 생성 
+	//$(".three").after("<li>뒤에삽입</li>");  //.after(): 선택한 요소 뒤에 새 요소를 추가하거나, 다른 곳에 있는 요소를 이동
+	$("<li>뒤에 삽입</li>").insertAfter(".three"); //.insertAfter(): 내용을 선택한 요소 뒤에 추가 
+	//(11)h2태그중에 2번째 요소를 <div>태그로 감싸기 
+	//$("h2:nth-of-type(2)").wrap('<div></div>');// :nth-of-type( n ) 선택기는 특정 유형의 상위 n 번째 하위 요소인 모든 요소를 ​​선택
+	$("h2").eq(1).wrap('<div>');
+	//(12)h2태그중에 하위 요소인 strong태그를 포함하는 <h2>에 class="tit"속성 추가 
+	 $("h2").children("strong").parent().addClass("tit"); 
+	// .children() : 선택한 요소의 자식(child) 요소를 모두 선택 //h2는 여러개고  strong을 포함하는(.children("strong")) h2=.parent()...??
+	 $("h2:has(strong)").addClass("tit");		
+	 //(13)h2태그중에 마지막 요소에 class="tit"속성을 제거 
+	 $("h2:last").removeClass('tit');// .last() : 선택된 요소의 마지막 // :last = 마지막으로 일치하는 요소를 가져온다.
+	
+})
+
+
+</script>
+
+<style>
+div {background-color:yellow;}
+.tit {background-color:orange;}
+
+</style>
+
+<body>
+<h1 align="center"><strong>내용1</strong></h1>
+<h2><strong>내용2</strong></h2>
+<h2>내용3</h2>
+<h2 class="tit">내용4</h2>
+<ul class="myList">
+	<li>리스트1</li>
+	<li id="two">리스트2</li>
+	<li class="three">리스트3</li>
+	<li>리스트4</li>
+</ul>
+</body>
+</html>

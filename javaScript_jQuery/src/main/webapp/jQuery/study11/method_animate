@@ -1,0 +1,76 @@
+
+  .animate()는 애니메이션 효과를 만듭니다.
+  .animate( properties [, duration ] [, easing ] [, complete ] )
+  
+ properties (애니메이션 효과를 줄 속성)
+backgroundPositionX
+backgroundPositionY
+borderBottomWidth
+borderLeftWidth
+borderRightWidth
+borderSpacing
+borderTopWidth
+borderWidth
+bottom
+fontSize
+height
+left
+letterSpacing
+lineHeight
+margin
+marginBottom
+marginLeft
+marginRight
+marginTop
+maxHeight
+maxWidth
+minHeight
+minWidth
+opacity
+outlineWidth
+padding
+paddingBottom
+paddingLeft
+paddingRight
+paddingTop
+right
+textIndent
+top
+width
+wordSpacing
+
+
+
+
+
+
+duration (효과가 완료될 떄까지 걸리는 시간 )
+단위는 1/1000초, 기본값은 400
+fast나 slow로 정할 수 있습니다. fast는 200, slow는 600에 해당
+
+
+easing ( 애니메이션 효과의 방식)
+
+swing과 linear이 가능하며, 기본값은 swing
+ linear는 일정한 속도로 진행
+
+complete ( 요소가 사라진 후 수행할 작업)
+
+
+버튼을 클릭하면 파란색 div 요소의 가로 크기가 변합니다.
+$( 'button' ).click( function() {
+          $( '#a' ).animate( {
+            width: '100%'
+          } );
+
+https://www.codingfactory.net/11820
+
+
+
+
+
+
+
+
+
+

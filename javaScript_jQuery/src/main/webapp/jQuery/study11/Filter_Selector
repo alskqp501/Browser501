@@ -1,0 +1,36 @@
+[제이쿼리/jQuery] 필터셀렉터(:)
+
+ex> h2태그중에 마지막 요소에 class="tit"속성을 제거 
+	 $("h2:last").removeClass('tit');
+
+ :fitst
+첫번째로 일치하는 요소를 가져온다.
+
+ :last
+마지막으로 일치하는 요소를 가져온다.
+
+ :even
+짝수번째 요소를 모두 가져온다 ( first index : 0 )
+
+ :odd
+홀수번째 요소를 모두 가져온다 ( first index : 0 )
+
+ :eq(index)
+ 인자로 전달된 index에 해당하는 요소를 가져온다. ( first index : 0 )
+
+ :gt(index)
+인자로 전달된 index 보다 큰 index를 가진 요소를 모두 가져온다.
+
+ :lt(index)
+인자로 전달된 index 보다 작은 index를 가진 요소를 모두 가져온다.
+
+ :has(selector)
+인자로 전달된 selector 요소를 하나 이상 포함하고 있는 요소를 가져온다.
+
+ :not(selector)
+인자로 전달된 selector 와 일치하지 않는 모든요소를 가져온다.
+
+:has()
+ 특정 요소를 포함하는 요소를 선택할 때 사용하는 선택자
+$( ':has(selector)' )
+$( 'p:has(span)' ) => span요소를 가지고 있는 p태그 요소를 선택 
