@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서버의 데이터를 대상 엘리먼트에 삽입하기 </title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+div {
+width:180px; height:80px;
+margin: 3px; float:left;
+}
+
+</style>
+
+<script>
+
+$(function() {
+	$("#menu1").click(function() {
+		$("#message1").load("source/menu.html");
+	});
+	
+	$("#menu2").click(function() {
+		$("#message2").load("source/menu.html li");  
+		//문서의 일부분이 로드된다.   //load()를 이용하면 손쉽게 html 문서의 내용 중간에 존재하는 특정 엘리먼트만 읽어서 삽입할수 있다.
+	});
+
+});
+
+
+</script>
+<body>
+
+<div>
+<a href="#" id="menu1">메뉴 보기1</a>
+<span id="message1"></span>
+</div>
+
+<div>
+<a href="#" id="menu2">메뉴 보기2</a>
+<span id="message2"></span>
+</div>
+
+</body>
+</html>

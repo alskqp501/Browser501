@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<style>
+div { width:180px; height:80px;
+	  margin: 3px; float:left; }
+
+</style>
+
+<script>
+$(function() {
+	$("#menu1").click(function() {
+		$.ajax({url:"source/menu.html",    
+		datatype : "html", 
+		success: function(data){ 
+		//$("#message1").html(data); 
+		$("#message1").append(data);  // 뒤에 추가하겠다 // 선택한 요소의 내용의 끝에 콘텐트를 추가
+		}
+		
+		}); 
+		
+	});
+	$("#menu2").click(function() {
+		$.ajax({url:"source/menu.html",    
+		datatype : "html", 
+		success: function(data){ 
+		$("#message2").html($(data).find('li')); // 날아오는 데이터 중에 li만 찾아서 보여주라 
+		// .find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용
+		// menu.html문서의 내용 중 li엘리먼트만 읽어서 id가 message2인 엘리먼트에 추가한다.
+	//	$("#message2").html($("menu ul").html()); // 위치가 같은 곳이면 실행됨
+		
+		}
+		
+		}); 
+		
+	});
+	
+});
+
+</script>
+<body>
+<div>
+<a href="#" id="menu1">메뉴 보기1</a>
+<span id="message1"></span>
+</div>
+
+<div>
+<a href="#" id="menu2">메뉴 보기2</a>
+<span id="message2"></span>
+</div>
+</body>
+</html>

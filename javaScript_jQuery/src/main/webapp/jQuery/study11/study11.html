@@ -16,8 +16,8 @@ $(function() {
 	//$("li:eq(0)").text("첫 번째 리스트");// text: 내용을 변경 
 	$("li:first").text("첫 번째 리스트");
 	//(3)h2태그에 자식 요소인 strong태그의 글자를 빨간색으로 적용
-	$("h2:nth-child(2)").css("color","red");// nth-child(n): 유형에 관계없이 부모 의 n 번째 자식인 모든 요소를 ​​선택
-	//$("h2 > strong").css("color","red"); // 부모 > 자식 
+	//$("h2:nth-child(2)").css("color","red");// nth-child(n): 유형에 관계없이 부모 의 n 번째 자식인 모든 요소를 ​​선택
+	$("h2 > strong").css("color","red"); // 부모 > 자식 
 	//(4)id=two인 요소의 이전 요소에 글자를 파란색으로 적용
 	$("#two").prev().css("color","blue");// .prev() : 이전 요소를 선택
 	//(5)id=two인 요소의 다음에요소에 글자를 보라색으로 적용
