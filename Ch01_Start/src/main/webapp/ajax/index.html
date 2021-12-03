@@ -5,22 +5,21 @@
 <meta charset="UTF-8">
 <title>JSP::AJAX::DB</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
 <script>
 $(function() {
 	$("#id01").on("click",function(){
 		alert("데이터 요청!");
-		$.ajax({
-			url:'db_from.jsp', // db연결코드 가져옴 //파일이 있냐
+		$.ajax({		//jquery
+			url:'db_form.jsp', // db연결코드 가져옴 //파일이 있냐
 			type:'get',
 			success: function(t){// success가 동작해서 화면에 가져오는게 t라고 설ㅈ정
 				$(t).find("person"). each(function() {      // db_from.jspdml person 태그를 찾아서 그 안에 내용을 찾아 반복하겠다 
 					var name =	$(this).find('name').text(); // 이 파일에 name을 찾아서 name의 텍스트를 찾아라 // 그걸 변수에 넣어
 					var age = $(this).find('age').text();
-					var salary = $(this).find('salary').text();
+					var salary = $(this).find('salary').text(); // text는 html의 태그를 해석하지않음 태그는 태그 그대로 출력 //  html은 태그 등 해석해서 출력 
 					
-					$("<h1></h1>").text(name+" " + age+ " "+ salary).appendTo('body') // 그 변수를 택스트로  <h1>태그의 자식 요소 body안에 (appendTo) 추가해서 출력 
+					$("<h1></h1>").text(name+" " + age+ " "+ salary).appendTo('body'); 
+					// 그 변수를 택스트로  <h1>태그의 자식 요소 body안에 (appendTo) 추가해서 출력 //append랑은 태그 위치만 반대
 	
 				}); 
 			
@@ -34,7 +33,7 @@ $(function() {
 	$("#id02").on("click",function(){
 	 	alert("데이터 전송");
 	 	$.ajax({
-	 		url:'db_to.jsp',
+	 		url:'db_to.jsp', 	//get 방식이면 물음표 
 	 		type: 'post',
 	 		data:{ //어떤 데이터를 전송할지 
 	 			name: $("#name1").val(),// name의 데이터는 아아디 name1의 값을 데이터로 보내겟다 //name 변수에 id값 넣어줌 

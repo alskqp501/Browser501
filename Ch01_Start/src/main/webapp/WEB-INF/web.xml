@@ -9,4 +9,17 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>start.html</welcome-file>
   </welcome-file-list>
-</web-app>
+  
+<!--   servlet Mapping 방법2. web.xml 방식  -->
+  <servlet>
+  	<servlet-name>ServletTest</servlet-name>
+  	<servlet-class>StartXML</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> 
+  	<servlet-name>ServletTest</servlet-name>
+  	<url-pattern>/ch02_start/Start_Xml</url-pattern>
+  </servlet-mapping>
+  
+
+</web-app> 

@@ -26,13 +26,9 @@ String salary =  request.getParameter("salary");
 //오라클 데이터 베이터에서 슬랙트 명령을 통해 데이터를 가지고 오기 
 //try.catch는 수동으로 써야됨
 
-// String name = request.getParameter("name");
-// String age =  request.getParameter("age");
-// String money =  request.getParameter("money");
-
 try{
 	//DB 연결 
-	String driver = "oracle.jdbc.driver.OrcalDriver";
+	String driver = "oracle.jdbc.driver.OrcleDriver";
 	String url ="jdbc.oracle:thin:@localhost:1521:orcl";
 	Class.forName(driver); 
 	Connection con = DriverManager.getConnection(url,"jsp","jsp");
@@ -40,8 +36,8 @@ try{
 	//sql 실행하기 위한 Statement 객체 
 	Statement stmt = con.createStatement();
 	//sql 구문 실행 
-	String sql ="insert into join values('"+name+"', "+age+","+salary+")";  // 넣을 값
-	stmt.execute(sql); // 실행
+	String sql ="insert into join values('"+name+"',"+age+","+salary+")";  // 넣을 값
+	stmt.executeUpdate(sql); // 실행
 	con.close(); // 닫기
 	stmt.close();
 	

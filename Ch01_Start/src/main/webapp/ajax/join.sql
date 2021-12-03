@@ -6,3 +6,5 @@ name varchar2(20),
 age number,
 money number
 );
+
+select *  from JOIN;
