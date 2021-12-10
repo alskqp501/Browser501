@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+//MVC: Controller
 @WebServlet("/login/login_mvc2")
 public class LoginServlet_MVC2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -26,8 +26,10 @@ public class LoginServlet_MVC2 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		if(id.equals("admin") && pw.equals("1234")) {
+	//세션 만들기 
 		//HttpSession은 Java의 인터페이스(interface)이며, 이를 사용하여 세션(session)을 제어할 수 있습니다.
 		HttpSession session = request.getSession();
+		//만들어진 세션에 이름과 데이터 설정하기 
 		session.setAttribute("ids",id); // Attribute= 변수 // 변수를 저장하겠다  // (id, 값) // HttpSession's setAttribute("Key", Value)
 		session.setAttribute("pws",pw); // Attribute= 변수 // 변수를 저장하겠다  // (id, 값)// session.setAttribute("속성명",속성값);
 		RequestDispatcher d = request.getRequestDispatcher("../loginout/logout_mvc2.jsp");
